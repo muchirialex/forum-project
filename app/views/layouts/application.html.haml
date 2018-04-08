@@ -1,0 +1,22 @@
+!!!
+%html
+%head
+  %title Business Edge Research Forum
+  = csrf_meta_tags
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+  %link{ rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Raleway:300,400,500,700", type: "text/css"}
+  = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+%body
+  %header.main_header.clearfix
+    .wrapper
+      #logo
+        %p Business Edge Research Forum
+      #buttons
+        = link_to "New Post", new_post_path  
+
+  .wrapper    
+    %p.notice= notice
+    %p.alert= alert
+  
+  .wrapper
+    = yield
