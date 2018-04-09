@@ -1,5 +1,6 @@
-%h1 Edit Post
+%h1#page_title Edit Post
 
-= render 'form'
-
-= link_to "Canel", post_path
+.div.skinny_wrapper.wrapper_padding
+	= render 'form'
+	%br/
+	= link_to "Canel", post_path, class: "button"

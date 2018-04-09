@@ -1,28 +1,31 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+$dark: #424652;
+$light: #9a9da4;
+$white: #FFFFFF;
+$highlight: #0095ff;
+$secondary: #bebebe;
+$border: #E9E9E9;
+$black: #000;
+
 
 body {
- 	font-family: 'Raleway', sans-serif;
+	font-family: 'Raleway', sans-serif;
  	background: #EDEFF0;
- }
+}
+
+.skinny_wrapper {
+	width: 80%;
+	max-width: 760px;
+	margin: 0 auto;
+}
 
 .wrapper {
 	width: 60%;
 	max-width: 1140px;
 	margin: 0 auto;
+}
+
+.wrapper_padding {
+	padding: 4rem 0;
 }
 
 .clearfix:before, .clearfix:after {
@@ -148,14 +151,6 @@ body {
 				font-weight: 700;
 			}
 		}
-		input[type="submit"] {
-			background: #397CAC;
-			border: none;
-			color: white;
-			font-weight: 100;
-			padding: .5em 1em;
-			border-radius: .2em;
-		}
 		textarea {
 			width: 100%;
 			min-height: 200px;
@@ -163,5 +158,41 @@ body {
 			border-radius: .2em;
 			margin: 1em 0;
 		}
+	}
+}
+
+#page_title {
+	text-align: center;
+	border-bottom: 1px solid $border;
+	padding: 1.5em 0;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+	width: 100%;
+	height: 3em;
+	border: 1px solid $border;
+	padding: 1em;
+	margin: .5em 0 2em 0;
+}
+
+textarea {
+	min-height: 15em;
+	width: 604px;
+}
+
+input[type="submit"], .button {
+	outline: none;
+	background: transparent;
+	border: 2px solid $border;
+	text-align: center;
+	font-size: 1em;
+	color: $dark;
+	text-decoration: none;
+	padding: 1em 2em;
+	&:hover {
+		border: 2px solid $highlight;
+		color: $highlight;
 	}
 }
