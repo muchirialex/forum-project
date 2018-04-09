@@ -36,6 +36,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'simple_form', '~> 3.5', '>= 3.5.1'
 gem 'devise', '~> 4.4', '>= 4.4.3'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
 
 group :development do

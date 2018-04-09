@@ -10,6 +10,11 @@ $black: #000;
 body {
 	font-family: 'Raleway', sans-serif;
  	background: #EDEFF0;
+
+ 	a {
+ 		text-decoration: none;
+ 		color: $highlight;
+ 	}
 }
 
 .skinny_wrapper {
@@ -49,19 +54,24 @@ body {
 			letter-spacing: -1px;
 			font-size: 1.5em;
 			text-decoration: none;
-			color:#397CAC;
+			color:$highlight;
 		}
 	}
 	#buttons {
 		float: right;
 		a {
 			line-height: 60px;
-			background: #397CAC;
+			background: $highlight;
 			padding: .5em 1em;
 			border-radius: 0.2em;
 			color: white;
 			text-decoration: none;
 			font-weight: 100;
+			&:hover {
+				background: $white;
+				color: $highlight;
+				border: 2px solid $highlight;
+			}
 		}
 	}
 }
@@ -73,11 +83,11 @@ body {
 	.post {
 		margin: 1em 0;
 		padding: 1em 0;
-		border-bottom: 1px solid #D1d1d1;
+		border-bottom: 1px solid $border;
 		.title {
 			margin: 0;
 			a {
-				color: #397CAC;
+				color: $highlight;
 				text-decoration: none;
 				font-weight: 100;
 				font-size: 1.25rem;
@@ -92,8 +102,8 @@ body {
 }
 
 .button {
-	color: #397CAC;
-	border: 1px solid #397CAC;
+	color: $highlight;
+	border: 1px solid $highlight;
 	padding: .5em 1em;
 	border-radius: 0.2em;
 	text-decoration: none;
@@ -107,7 +117,7 @@ body {
 	h1 {
 		font-weight: 100;
 		font-size: 2em;
-		color: #397CAC;
+		color: $highlight;
 		margin-top: 0;
 	}
 	p {
@@ -118,7 +128,7 @@ body {
 	}
 	#comments {
 		.comment {
-			border-bottom: 1px solid #d1d1d1;
+			border-bottom: 1px solid $border;
 			padding-bottom: 1em;
 			margin-bottom: 1em;
 			.content {
@@ -132,8 +142,8 @@ body {
 				text-align: right;
 				padding-top: 1.5em;
 				a {
-					color: #397CAC;
-					border: 1px solid #397CAC;
+					color: $highlight;
+					border: 1px solid $highlight;
 					padding: .5em 1em;
 					border-radius: 0.2em;
 					text-decoration: none;
@@ -145,7 +155,7 @@ body {
 				padding: 0;
 			}
 			.comment_author {
-				color: #397CAC;
+				color: $highlight;
 				margin-top: .5rem;
 				font-size: 0.6em;
 				font-weight: 700;
@@ -154,7 +164,7 @@ body {
 		textarea {
 			width: 100%;
 			min-height: 200px;
-			border: 1px solid #d1d1d1;
+			border: 1px solid $border;
 			border-radius: .2em;
 			margin: 1em 0;
 		}
@@ -171,7 +181,6 @@ body {
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
 	width: 100%;
-	height: 3em;
 	border: 1px solid $border;
 	padding: 1em;
 	margin: .5em 0 2em 0;
@@ -179,7 +188,8 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 
 textarea {
 	min-height: 15em;
-	width: 604px;
+	width: 638px;
+	padding: 1em !important;
 }
 
 input[type="submit"], .button {
@@ -194,5 +204,47 @@ input[type="submit"], .button {
 	&:hover {
 		border: 2px solid $highlight;
 		color: $highlight;
+	}
+}
+
+.pagination:before,
+.pagination:after {
+	content: " ";
+	display: table;
+}
+
+.pagination:after {
+	clear: box;
+}
+
+.pagination {
+	text-align: center;
+	margin: 0 0 3em 0;
+	a, .previous_page, .current, .next_page {
+		padding: .75em 1em;
+		margin: 0 .5em;
+		border-radius: .15em;
+		line-height: 20px;
+		text-decoration: none;
+		background: $white;
+		font-weight: 700;
+		font-size: .75em;
+		font-style: normal;
+		color: $dark;
+		&:hover {
+			background: $highlight;
+			color: $white;
+		}
+	}
+	.current {
+		background: $highlight;
+		color: $white;
+	}
+	.disabled {
+		color: #C0C0C0;
+		&:hover {
+			color: #C0C0C0;
+			background: $white;
+		}	
 	}
 }

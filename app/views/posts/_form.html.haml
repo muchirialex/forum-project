@@ -1,4 +1,5 @@
-= simple_form_for @post do |f|
-	= f.input :title
-	= f.input :content
-	= f.submit
+%div.skinny_wrapper.wrapper_padding
+	= simple_form_for @post do |f|
+		= f.input :title
+		= f.input :content
+		= f.submit
