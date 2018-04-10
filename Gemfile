@@ -37,6 +37,7 @@ gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'simple_form', '~> 3.5', '>= 3.5.1'
 gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'friendly_id', '~> 5.2', '>= 5.2.3'
 
 
 group :development do
